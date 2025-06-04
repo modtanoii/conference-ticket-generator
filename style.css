@@ -5,14 +5,14 @@
 }
 
 :root {
---Neutral-0: hsl(0, 0%, 100%)
---Neutral-300: hsl(252, 6%, 83%)
---Neutral-500: hsl(245, 15%, 58%)
---Neutral-700: hsl(245, 19%, 35%)
---Neutral-900: hsl(248, 70%, 10%)
+--Neutral-0: hsl(0, 0%, 100%);
+--Neutral-300: hsl(252, 6%, 83%);
+--Neutral-500: hsl(245, 15%, 58%);
+--Neutral-700: hsl(245, 19%, 35%);
+--Neutral-900: hsl(248, 70%, 10%);
 
---Orange-500: hsl(7, 88%, 67%)
---Orange-700: hsl(7, 71%, 60%)
+--Orange-500: hsl(7, 88%, 67%);
+--Orange-700: hsl(7, 71%, 60%);
 
 --Gradient-text-start: hsl(7, 86%, 67%);
 --Gradient-text-end: hsl(0, 0%, 100%);
@@ -34,7 +34,7 @@ body {
     background: url(assets/images/background-desktop.png) no-repeat center center / cover;
     width: 100%;
     height: 100vh;
-    posotion: relative;
+    position: relative;
     aspect-ratio: 16 / 9;
     overflow-y: hidden;
     display: grid;
@@ -145,7 +145,7 @@ body {
 }
 
 .form-item .upload-hint.error {
-    color: var(--orange-500);
+    color: var(--Orange-500);
 }
 
 .form-item .text-hint {
@@ -211,14 +211,14 @@ body {
 }
 
 .form-item .upload-box .file-actions {
-    /* display: none; */
+    display: none;
 }
 
 .form-item .upload-box .file-actions.show {
     display: block;
 }
 
-.form-item .upload-box .file-actions.button {
+.form-item .upload-box .file-actions button {
     cursor: pointer;
     background-color: var(--Neutral-500);
     color: var(--Neutral-300);
@@ -228,7 +228,7 @@ body {
 
 form .generate-ticket {
     cursor: pointer;
-    background-color: var(--orange-500);
+    background-color: var(--Orange-500);
     padding: 1rem;
     width: 100%;
     font-size: 1.15rem;
@@ -239,7 +239,7 @@ form .generate-ticket {
 }
 
 form .generate-ticket:hover {
-    background-color: var(--orange-700);
+    background-color: var(--Orange-700);
 }
 
 .display-data {
@@ -251,19 +251,19 @@ form .generate-ticket:hover {
     z-index: 20;
 }
 
-.diaplay-data .logo {
+.display-data .logo {
     margin: 0 auto 2rem auto;
 }
 
-.diaplay-data .headings {
+.display-data .headings {
     margin-bottom: 6rem;
 }
 
-.diaplay-data .headings p {
+.display-data .headings p {
     padding: 0 7.5rem;
 }
 
-.diaplay-data .ticket-container {
+.display-data .ticket-container {
     background-color: var(--Neutral-900);
     background: url(assets/images/pattern-ticket.svg);
     background-size: contain;
@@ -276,7 +276,7 @@ form .generate-ticket:hover {
     border-radius: .5rem;
 }
 
-.diaplay-data .ticket-container .logo {
+.display-data .ticket-container .logo {
     margin-bottom: .5rem;
     font-size: 2.75rem;
     font-weight: 700;
@@ -285,39 +285,39 @@ form .generate-ticket:hover {
     gap: 1rem;
 }
 
-.diaplay-data .ticket-container .date {
+.display-data .ticket-container .date {
     color: var(--Neutral-300);
     padding-left: 3.5rem;
     margin-bottom: 4rem;
 }
 
-.diaplay-data .ticket-container .ticket-user {
+.display-data .ticket-container .ticket-user {
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
-.diaplay-data .ticket-container .ticket-user img {
+.display-data .ticket-container .ticket-user img {
     width: 65px;
     border-radius: .75rem;
 }
 
-.diaplay-data .ticket-container .ticket-user #display-name {
+.display-data .ticket-container .ticket-user #display-name {
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.diaplay-data .ticket-container .ticket-user .github-username {
+.display-data .ticket-container .ticket-user .github-username {
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
-.diaplay-data .ticket-container .ticket-user .github-username img {
+.display-data .ticket-container .ticket-user .github-username img {
     width: 20px;
 }
 
-.diaplay-data .ticket-container .ticket-number {
+.display-data .ticket-container .ticket-number {
     color: var(--Neutral-300);
     font-size: 1.75rem;
     position: absolute;
