@@ -20,14 +20,14 @@ const formData = {
 
 function validateTextInputs() {
     let isValid = true
-    
+
     textInputs.forEach(input => {
         const hint = input.nextElementSibling
 
         if (input.value.trim() === '') {
             input.classList.add('error')
             hint.classList.add('error')
-            isValid = false;
+            isValid = false
         } else {
             input.classList.remove('error')
             hint.classList.remove('error')
@@ -44,7 +44,7 @@ function validateFile(input, hint) {
     if (!file) {
         hint.classList.add('error')
         //svg icon
-        hint.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">< stroke="#f57261" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"></path></svg> Please upload an image.';
+        hint.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#f57261" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg> Please upload an image.'
         isValid = false
     } else {
         const validTypes = ['image/jpeg', 'image/png']
@@ -52,23 +52,22 @@ function validateFile(input, hint) {
 
         if (!validTypes.includes(file.type)) {
             hint.classList.add('error')
-            hint.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"></path></svg> Please upload a valid image (JPEG or PNG).';
+            hint.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg> Please upload a valid image (JPEG or PNG).'
             input.value = ''
             isValid = false
         } else if (file.size > maxSize) {
             hint.classList.add('error')
-            hint.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"></path></svg> Image size should be less than 500KB.';
+            hint.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg> Image size should be less than 500KB.'
             input.value = ''
             isValid = false
         } else {
             hint.classList.remove('error')
-            hint.innerHTML = '<img src="assets/images/icon-info.svg" alt=""> Upload your photo (JPEG or PNG, max 500KB)';
+            hint.innerHTML = '<img src="assets/images/icon-info.svg" alt=""> Upload your photo (JPEG or PNG, max 500KB)'
             displayUploadedImage(file)
         }
     }
 
-    return isValid;
-
+    return isValid
 }
 
 function displayUploadedImage(file) {
@@ -91,7 +90,7 @@ function resetUpload() {
     messageAction.classList.remove('hide')
     fileActions.classList.remove('show')
     uploadHint.classList.remove('error')
-    uploadHint.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">< stroke="#f57261" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"></path></svg> Upload your photo (JPEG or PNG, max 500KB)';
+    uploadHint.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path stroke="#f57261" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"></svg> Upload your photo (JPEG or PNG, max 500KB)'
 }
 
 function storeAndDisplayFormData() {
@@ -118,7 +117,7 @@ dropArea.addEventListener('dragover', (e) => {
 
 dropArea.addEventListener('drop', (e) => {
     e.preventDefault()
-    
+
     const files = e.dataTransfer.files
     if (files.length > 0) {
         fileInput.files = files
@@ -144,7 +143,7 @@ changeImage.addEventListener('click', (e) => {
 
 form.addEventListener('submit', e => {
     e.preventDefault()
-    
+
     const isTextValid = validateTextInputs()
     const isFileValid = validateFile(fileInput, uploadHint)
 

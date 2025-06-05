@@ -34,7 +34,7 @@
     </div>
 
     <div class="content-container">
-      <div class="form-content" id="form-content" style="display: block;">
+      <div class="form-content" id="form-content">
         <img src="assets/images/logo-full.svg" alt="" class="logo">
         <div class="headings">
           <h1>Your Journey to Coding Conf 2025 Start Here!</h1>
@@ -42,21 +42,23 @@
         </div>
         <form action="" id="ticket-form">
           <div class="form-item">
-            <label for="">upload-avatar</label>
+            <label for="file-input">upload-avatar</label>
             <div id="drop-area" class="upload-box">
               <input type="file" name="" id="file-input" class="file-input" accept="image/png, image/jpeg">
               <img src="/assets/images/icon-upload.svg" alt="" id="uploaded-image" class="uploaded-image">
-              <div class="message-action">Drag and drop or click to upload</div>
+              <div class="message-action" id="message-action">Drag and drop or click to upload</div>
               <div class="file-actions" id="file-actions">
                 <button type="button" id="remove-image">Remove image</button>
-                <button type="button" id="remove-image">Change image</button>
+                <button type="button" id="change-image">Change image</button>
               </div>
             </div>
             <p id="upload-hint" class="upload-hint">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
-                <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
-                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042" />
+                <path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
               </svg>
               Upload your photo (JPG or PNG, max size: 500KB).
             </p>
@@ -67,9 +69,11 @@
             <input type="text" name="" id="full-name" class="required">
             <p class="text-hint">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
-                <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
-                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042" />
+                <path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
               </svg>
               Please enter your full name.
             </p>
@@ -79,9 +83,11 @@
             <input type="email" name="" id="email" class="required">
             <p class="text-hint">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
-                <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
-                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042" />
+                <path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
               </svg>
               Please enter a valid email address.
             </p>
@@ -91,9 +97,11 @@
             <input type="text" name="" id="github" class="required">
             <p class="text-hint">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
-                <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
-                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042" />
+                <path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="#f57621" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#f57621" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
               </svg>
               Please enter your GitHub username.
             </p>
@@ -108,7 +116,8 @@
         <img src="assets/images/logo-full.svg" alt="" class="logo">
         <div class="headings">
           <h1>Congrats, <span id="header-name" class="gradient-text"></span>! Your Ticket is ready.</h1>
-          <p>We've emailed your ticket to <span id="display-email" class="header-email"></span> and will send updates in the run
+          <p>We've emailed your ticket to <span id="display-email" class="header-email"></span> and will send updates in
+            the run
             up to the event.</p>
         </div>
 
